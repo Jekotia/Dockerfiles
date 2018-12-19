@@ -124,6 +124,7 @@ help:
 	@echo "major-release	increments the major release level, build and push to registry"
 	@echo "release		build the current release and push the image to the registry"
 	@echo "build		builds a new version of your Docker image and tags it"
+	@echo "latest		builds under the latest tag and pushes to Docker Hub"
 	@echo "snapshot	build from the current (dirty) workspace and pushes the image to the registry"
 	@echo "check-status	will check whether there are outstanding changes"
 	@echo "check-release	will check whether the current directory matches the tagged release in git."
