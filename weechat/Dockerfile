@@ -1,5 +1,5 @@
-FROM	jekotia/alpine as build
-
+FROM	jekotia/alpine:3.8.0 as build
+ENV	WEECHAT_VERSION=2.3
 RUN	BUILD_DEPS=" \
 	cmake \
 	build-base \
@@ -25,7 +25,8 @@ RUN	BUILD_DEPS=" \
 	gnutls \
 	shadow \
 	&& update-ca-certificates \
-	&& WEECHAT_TARBALL="$(curl -sS https://api.github.com/repos/weechat/weechat/releases/latest | jq .tarball_url -r)" \
+#	&& WEECHAT_TARBALL="$(curl -sS https://api.github.com/repos/weechat/weechat/releases/latest | jq .tarball_url -r)" \
+	&& WEECHAT_TARBALL="https://api.github.com/repos/weechat/weechat/tarball/v${WEECHAT_VERSION}" \
 	&& curl -sSL $WEECHAT_TARBALL -o /tmp/weechat.tar.gz \
 	&& mkdir -p /tmp/weechat/build \
 	&& tar xzf /tmp/weechat.tar.gz --strip 1 -C /tmp/weechat \
@@ -33,8 +34,10 @@ RUN	BUILD_DEPS=" \
 	&& cmake .. -DCMAKE_INSTALL_PREFIX=/usr \
 	&& make && make install
 
+RUN	weechat --version | grep "${WEECHAT_VERSION}"
 
-FROM	jekotia/alpine:3.8
+
+FROM	jekotia/alpine:3.8.0
 COPY	--from=build /usr/bin/weechat /usr/bin/weechat
 COPY	--from=build /usr/bin/weechat-curses /usr/bin/weechat-curses
 COPY	--from=build /usr/bin/weechat-headless /usr/bin/weechat-headless
