@@ -6,4 +6,4 @@ groupmod -o -g "$UID" $GROUP
 chown -R $USER:$GROUP $DATA
 chown -R $USER:$GROUP $HOME
 
-exec su-exec $USER /usr/bin/weechat -d $DATA
+exec su-exec $USER /usr/bin/weechat-headless -d $DATA
