@@ -1,2 +1,0 @@
-_ "github.com/lucaslorentz/caddy-docker-proxy/plugin"
-_ "github.com/caddyserver/dnsproviders/cloudflare"
