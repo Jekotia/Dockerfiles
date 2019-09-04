@@ -12,7 +12,7 @@ ENV	CADDY_VERSION=v1.0.3 \
 	CADDYPATH=$caddypath
 
 #-#	Import build file that includes plugins
-COPY	copy/caddycustom.go $BUILDPATH/main.go
+COPY	copy/main.go $BUILDPATH/main.go
 
 WORKDIR	$BUILDPATH
 
