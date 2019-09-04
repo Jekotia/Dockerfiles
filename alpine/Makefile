@@ -1,1 +1,1 @@
-include ${_DOCKERFILES}/make/Makefile
+../Makefile

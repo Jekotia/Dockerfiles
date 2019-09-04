@@ -1,0 +1,3 @@
+[submodule "make"]
+	path = make
+	url = git@github.com:Jekotia/docker-makefile.git
