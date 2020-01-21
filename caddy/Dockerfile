@@ -1,6 +1,5 @@
-ARG     buildpath=/build
-ARG     caddypath=/caddy
-ARG	caddyver=v1.0.0
+ARG	buildpath=/build
+ARG	caddypath=/caddy
 
 # BEGIN BUILD ENVIRONMENT #
 #-------------------------#
@@ -8,32 +7,30 @@ FROM	golang:1.12 as build
 
 ARG	buildpath
 ARG	caddypath
-ARG	caddyver
-
-ENV	BUILDPATH=$buildpath \
-	CADDYPATH=$caddypath \
-	CADDYVER=$caddyver
+ENV	CADDY_VERSION=v1.0.3 \
+	BUILDPATH=$buildpath \
+	CADDYPATH=$caddypath
 
 #-#	Import build file that includes plugins
-COPY	copy/caddycustom.go $BUILDPATH/caddycustom.go
+COPY	copy/main.go $BUILDPATH/main.go
 
 WORKDIR	$BUILDPATH
 
-RUN	\
 	#-# Set the transitional environment variable for Go modules \
-	export GO111MODULE=on \
+RUN	export GO111MODULE=on
 	#-# Initialise the go mod file for the project??? Not entirely certain what this does. \
-	&& go mod init caddy \
-	#-# Specify that we want version ${CADDYVER} of the source \
-	&& go mod edit -require github.com/mholt/caddy@${CADDYVER} \
+RUN	go mod init caddy
 	#-# Get the caddy source. \
-	&& go get github.com/mholt/caddy \
+RUN	go get github.com/caddyserver/caddy@$CADDY_VERSION
+
 	#-# Build caddy binary into current directory \
-	&& go build \
+RUN	go build
 	#-# Ensure plugins are present \
-	&& ./caddy -plugins | grep "docker" \
+RUN	./caddy -plugins | grep "tls.dns.cloudflare"
+RUN	./caddy -plugins | grep "docker"
+
 	#-# Ensure ca-certificates are present, to be copied later \
-	&& apt-get install ca-certificates
+RUN	apt-get install ca-certificates
 
 #-----------------------#
 # END BUILD ENVIRONMENT #
@@ -47,8 +44,6 @@ FROM	phusion/baseimage:0.11
 
 ARG	buildpath
 ARG	caddypath
-ARG	caddyver
-
 ENV	BUILDPATH=$buildpath \
 	CADDYPATH=$caddypath
 
