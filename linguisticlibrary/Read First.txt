@@ -1,0 +1,51 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LINGUISTIC LIBRARY VERSION 1.0.2
+by Adion Designs (http://adiondesigns.com/)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Hello!
+For a step-by-step walkthrough on how to install
+this software, watch the online video guide at:
+
+	https://www.youtube.com/watch?v=xU63h6U-QCQ
+
+_________________________________________________
+
+TEXT INSTRUCTIONS SUMMARY:
+
+1) Upload the contents inside the linguisticlibrary_v1.0.2
+folder onto your server in whatever folder you want the software to be.
+
+2) Create a new database in your hosting account (via phpMyAdmin) and
+upload the linguisticlibrary_v1.sql file into it.
+
+3) Inside the contents of the folder you uploaded, go to
+ /includes/connectdb.php and change the following variables to your 
+database's credentials: 
+
+	$DB_USER = "replace_username_here";
+	$DB_PASS = "replace_password_here";
+	$DB_NAME = "replace_database_name_here";
+
+(you have to create a new database via your webhost if you don't have one setup)
+
+4) In your web browser, visit the homepage of the root folder where you
+uploaded the folder contents. Click "Admin Access" in the footer to enter the Admin Panel. Use the credentials:
+
+	user: abc@gmail.com
+	pass: 123456
+
+You'll be in the Dashboard of the Admin Panel, where you can start making
+your changes. In the Admin Listing tab you can change your email and password.
+BE SURE TO DO THAT! If you have any problems, you can visit our support forum
+at: http://sindarinlibrary.boards.net/
+
+You can find further instructions on software use via these files in your 
+root folder:
+
+/howtocompose.php
+/docummentation.php
+
+Happy Language Composition!

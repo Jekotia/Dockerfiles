@@ -1,0 +1,11 @@
+errors:
+- Charset Manager is not working. New characters can't be added anymore. I need to be able to add them in UTF-8 format.
+- library.php listing doesn't show anything.
+- I can't seem to edit accounts from the Account Settings page.
+- Search function isn't working.
+- - if I type in "mango", which is a dictionary word, nothing comes up.
+- - if i type in "life" or "energy", which are the title of this post ( http://sindarinlibrary.com/entry.php?
+- - the div_dictionary always shows up, even when there is no dictionary word.
+- link_page=library&id=3&postname=Life%20Energy ) nothing appears.
+- The 3 html columns in the frontpage footer don't support single quotes ' ' or double quotes " " . When I Update the page in the admin panel little slashes appear like \" ...and every time i update it, a new slash appears. So it becomes like this: \\\\\\\\\" .
+- 

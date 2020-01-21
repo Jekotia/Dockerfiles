@@ -1,0 +1,9 @@
+/* Remove unwanted elements */
+ header nav, footer,#print_page
+{
+   display: none;
+}
+.divprint
+{
+	display: none;
+}
