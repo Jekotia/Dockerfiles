@@ -1,12 +1,13 @@
+<!-- THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE PROVIDED -->
 <?php
 $connectionflg = 1;
 global $DB_HOST,$DB_USER,$DB_PASS;
 if($connectionflg == 1)
 	{
-       $DB_HOST = "localhost";
-       $DB_USER = "replace_username_here";
-	   $DB_PASS = "replace_password_here";
-	   $DB_NAME = "replace_database_name_here";
+       $DB_HOST =  $_ENV["MYSQL_HOST"];
+       $DB_USER =  $_ENV["MYSQL_USER"];
+       $DB_PASS =  $_ENV["MYSQL_PASSWORD"];
+       $DB_NAME =  $_ENV["MYSQL_DATABASE"];
 	}
 if($connectionflg == 0)
 	{

@@ -1,3 +1,7 @@
+<!-- THIS FILE HAS BEEN MODIFIED FROM THE ORIGINAL SOURCE PROVIDED -->
+Note that any license text from the root repository does not apply to the
+linguisticlibrary directory or its contents. Original license text follows:
+
 Copyright 2015 Juan Sandoval
 
 Licensed under the Apache License, Version 2.0 (the "License");
