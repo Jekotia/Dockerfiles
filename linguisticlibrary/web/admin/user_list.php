@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include("header.php"); 
 include_once("admin_templateclass/user_list_manager.php");
 $classObject	 = 	new user_list_class();

@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 include("header.php"); 
 include_once("admin_templateclass/alphabet_listing_manager.php"); 
 $classObject		= 	new alphabet_listing_class();

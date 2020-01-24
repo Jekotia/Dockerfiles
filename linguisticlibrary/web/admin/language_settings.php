@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include("header.php");
 include_once("admin_templateclass/add_language_setting_manager.php");
 $classObject		= 	new add_language_setting_class();

@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 include 'header1.php';
 if(isset($_POST['submit']))
 {
