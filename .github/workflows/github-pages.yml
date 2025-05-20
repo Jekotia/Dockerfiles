@@ -3,8 +3,8 @@ name: GitHub Pages
 on:
   push:
     branches: [ "master" ]
-    paths:
-      - 'github-pages/'
+    #paths:
+    #  - 'github-pages/'
   pull_request:
     branches: [ "master" ]
 
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: './github-pages/'
+        working-directory: './github-pages'
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
