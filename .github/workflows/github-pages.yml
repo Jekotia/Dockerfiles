@@ -3,13 +3,18 @@ name: GitHub Pages
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - 'github-pages/'
   pull_request:
     branches: [ "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: './github-pages/'
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build github-pages/ --file Dockerfile --tag github-pages:$(date +%s) --tag github-pages:latest
+      run: docker build . --file Dockerfile --tag github-pages:$(date +%s) --tag github-pages:latest
