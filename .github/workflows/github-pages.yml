@@ -50,7 +50,7 @@ jobs:
         with:
           context: github-pages
           push: true
-          tags: ghcr.io/jekotia/github-pages:latest,ghcr.io/jekotia/github-pages:${{ github.sha }} #${{ steps.meta.outputs.tags }},
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}:latest,${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}:${{ github.sha }} #${{ steps.meta.outputs.tags }},
           labels: ${{ steps.meta.outputs.labels }}
       
       # This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see [Using artifact attestations to establish provenance for builds](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
