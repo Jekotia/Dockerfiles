@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   linglib:
-    image: jekotia/linguistic-library
+    image: ghcr.io/jekotia/linguistic-library
     container_name: linglib.app
     restart: unless-stopped
     environment:
