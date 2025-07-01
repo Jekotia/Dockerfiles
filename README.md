@@ -1,0 +1,1 @@
+This repository is is currently for evaluation purposes. It exists in order to run the older, abandoned application Linguistic Library, and assess if it is worth upgrading it to a modern php version.
