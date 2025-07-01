@@ -355,10 +355,10 @@ CREATE TABLE IF NOT EXISTS `user_register` (
 -- Dumping data for table `user_register`
 --
 
-INSERT INTO `user_register` (`id`, `name`, `display_email`, `password`, `follow_tags`, `user_type`, `approval_required`, `date_added`, `is_active`) VALUES
-(1, 'Admin', 'team@adiondesigns.com', '', 'single,double,triple', 'admin', 'N', '2015-03-23 23:27:43', 'Y'),
-(5, 'Tester', 'auburneye@live.com', 'a2F0YWthbmE=', '', 'admin', 'N', '2015-03-29 15:09:11', 'Y'),
-(6, 'Admin', 'erifrail@live.com', 'aGlub2thZ2U=', '', 'admin', 'N', '2015-03-29 15:22:29', 'Y');
+-- INSERT INTO `user_register` (`id`, `name`, `display_email`, `password`, `follow_tags`, `user_type`, `approval_required`, `date_added`, `is_active`) VALUES
+-- (1, 'Admin', 'team@adiondesigns.com', '', 'single,double,triple', 'admin', 'N', '2015-03-23 23:27:43', 'Y'),
+-- (5, 'Tester', 'auburneye@live.com', 'a2F0YWthbmE=', '', 'admin', 'N', '2015-03-29 15:09:11', 'Y'),
+-- (6, 'Admin', 'erifrail@live.com', 'aGlub2thZ2U=', '', 'admin', 'N', '2015-03-29 15:22:29', 'Y');
 
 -- --------------------------------------------------------
 
